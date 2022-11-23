@@ -139,6 +139,23 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+                        case 'cyclops':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/SPEED_FULL_ASS_SETS', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 24);
+				animation.addByPrefix('singUP', 'Up', 24);
+				animation.addByPrefix('singRIGHT', 'Right', 24);
+				animation.addByPrefix('singDOWN', 'Down', 24);
+				animation.addByPrefix('singLEFT', 'Left', 24);
+
+				addOffset('idle');
+				addOffset("singUP", 169, 296);
+				addOffset("singRIGHT", -84, -29);
+				addOffset("singLEFT", 343, 103);
+				addOffset("singDOWN", 113, -253);
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
